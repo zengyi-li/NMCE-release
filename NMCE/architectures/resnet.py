@@ -123,7 +123,7 @@ def Resnet18imgs():
 
 def Resnet18CIFAR():
     backbone = resnet18()
-    backbone.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=2, bias=False)
+    backbone.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
     backbone.maxpool = nn.Identity()
     backbone.fc = nn.Identity()
     return backbone
@@ -138,7 +138,7 @@ def Resnet18STL10():
 
 def Resnet34CIFAR():
     backbone = resnet34()
-    backbone.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=2, bias=False)
+    backbone.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
     backbone.maxpool = nn.Identity()
     backbone.fc = nn.Identity()
     return backbone

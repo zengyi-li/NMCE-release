@@ -15,9 +15,9 @@ def get_backbone(backbone_name):
     elif backbone_name=='resnet18stl10':
         feature_dim, backbone = 512, Resnet18STL10()
     elif backbone_name=='resnet34cifar':
-        feature_dim, backbone = 2048, Resnet34CIFAR()
+        feature_dim, backbone = 512, Resnet34CIFAR()
     elif backbone_name=='resnet34stl10':
-        feature_dim, backbone = 2048, Resnet34STL10()
+        feature_dim, backbone = 512, Resnet34STL10()
     else:
         raise NameError("{} not found in transform loader".format(backbone_name))
     
